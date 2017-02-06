@@ -1,0 +1,33 @@
+package messages;
+
+enum ScanMode {
+  SCAN_START = 0;
+  SCAN_FILE  = 1;
+  SCAN_STOP  = 2;
+}
+
+enum ResultCode {
+  SCAN_FINISHED = 0;
+  SCAN_STOPPED  = 1;
+}
+  
+message ScanFile {  
+  required int32 fileindex = 1 ;
+  required string path = 2;
+  required ScanMode ScanMode = 3 ;
+}
+
+
+message ScanProgress {
+  required int32 fileindex = 1 ;
+  required string path = 2;
+  required int32  progress = 3;
+}
+
+message ScanResult {
+  required int32 fileindex = 1 ;
+  required string path = 2;
+  required string result = 3;
+  required ResultCode resultCode = 4;
+}
+

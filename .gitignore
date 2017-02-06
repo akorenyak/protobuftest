@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# Generated MOC, resource and UI files
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.pro.user
